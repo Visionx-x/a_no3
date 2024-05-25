@@ -15,9 +15,9 @@ A bot which is automatically accept join request in telegram groups and welcome 
 * 5 Install requirements to run the bot `pip3 install -r requirements.txt`
 
 * 6 fill vars `nano vars.py`
-* 
+
 * 7 start screen `tmux`
 
 * 8 start the bot `python3 bot.py`
 
-* 9 close the terminal ctrl+b then d
+# close the terminal ctrl+b then d
