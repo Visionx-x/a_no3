@@ -61,51 +61,52 @@ async def welcome_goodbye(client: thanos, message: ChatMemberUpdated):
     try:
         new_chat_member = message.new_chat_member
         old_chat_member = message.old_chat_member
+        chat = message.chat
 
-        if new_chat_member and new_chat_member.status == "member":
-            add_to_data(group_data, message.chat.id, GROUP_DATA_FILE)
-            user = new_chat_member.user
-            chat = message.chat
-            logger.info(f"{user.first_name} joined {chat.title}")
-            await client.send_message(
-                chat_id=chat.id,
-                text=f"Hello {user.mention}, welcome to {chat.title}!"
-            )
-        elif old_chat_member and old_chat_member.status == "left":
-            user = old_chat_member.user
-            chat = message.chat
-            logger.info(f"{user.first_name} left {chat.title}")
-            await client.send_message(
-                chat_id=chat.id,
-                text=f"Goodbye {user.mention}, we will miss you in {chat.title}!"
-            )
+        if new_chat_member:
+            if new_chat_member.status == "member":
+                add_to_data(group_data, chat.id, GROUP_DATA_FILE)
+                user = new_chat_member.user
+                logger.info(f"{user.first_name} joined {chat.title}")
+                await client.send_message(
+                    chat_id=chat.id,
+                    text=f"Hello {user.mention}, welcome to {chat.title}!"
+                )
+        elif old_chat_member:
+            if old_chat_member.status == "left":
+                user = old_chat_member.user
+                logger.info(f"{user.first_name} left {chat.title}")
+                await client.send_message(
+                    chat_id=chat.id,
+                    text=f"Goodbye {user.mention}, we will miss you in {chat.title}!"
+                )
 
-            # Send a personal goodbye message to the user
-            personal_goodbye_message = (
-                "⚠️ Sorry for the inconvenience caused\n"
-                "🚨 You Can Request any Anime here\n"
-                "👉 https://t.me/SonuBhaiyaBot\n"
-                "🛎️ Koi bhi Help ke liye msg here ☝️"
-            )
+                # Send a personal goodbye message to the user
+                personal_goodbye_message = (
+                    "⚠️ Sorry for the inconvenience caused\n"
+                    "🚨 You Can Request any Anime here\n"
+                    "👉 https://t.me/SonuBhaiyaBot\n"
+                    "🛎️ Koi bhi Help ke liye msg here ☝️"
+                )
 
-            await client.send_message(
-                chat_id=user.id,
-                text=personal_goodbye_message
-            )
+                await client.send_message(
+                    chat_id=user.id,
+                    text=personal_goodbye_message
+                )
     except Exception as e:
         logger.error(f"Error in welcome_goodbye handler: {e}")
-        
-@thanos.on_chat_join_request(filters.group)
+
+@thanos.on_chat_join_request()
 async def autoapprove(client: thanos, message: ChatJoinRequest):
     try:
         await client.approve_chat_join_request(chat_id=message.chat.id, user_id=message.from_user.id)
         logger.info(f"Approved join request for {message.from_user.first_name} in {message.chat.title}")
 
-        # Send a welcome message to the group
-        await client.send_message(
-            chat_id=message.chat.id,
-            text=f"Hello {message.from_user.mention}, welcome to {message.chat.title}!"
-        )
+        # Send a welcome message to the group or channel
+        #await client.send_message(
+          #  chat_id=message.chat.id,
+          #  text=f"Hello {message.from_user.mention}, welcome to {message.chat.title}!"
+     #   )
 
         # Send a personal welcome message to the user
         personal_message = (
