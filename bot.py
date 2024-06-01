@@ -134,33 +134,6 @@ async def autoapprove(client: thanos, message: ChatJoinRequest):
     except Exception as e:
         logger.error(f"Error in autoapprove handler: {e}")
 
-@thanos.on_message(filters.command("broadcast") & filters.user(ownerid))
-async def broadcast_message(client: thanos, message: Message):
-    if len(message.command) < 2:
-        await message.reply_text("Please provide a message to broadcast.")
-        return
-
-    broadcast_text = " ".join(message.command[1:])
-
-    for user_id in user_data:
-        try:
-            await client.send_message(
-                chat_id=int(user_id),
-                text=f"📛 Broadcast Message From Admin !!\n➖➖➖➖➖➖➖➖➖➖➖➖➖➖\n\n{broadcast_text}"
-            )
-            logger.info(f"Sent broadcast message to {user_id}")
-        except Exception as e:
-            logger.error(f"Error sending broadcast message to {user_id}: {e}")
-
-    for group_id in group_data:
-        try:
-            await client.send_message(
-                chat_id=int(group_id),
-                text=f"📛 Broadcast Message From Admin !!\n➖➖➖➖➖➖➖➖➖➖➖➖➖➖\n\n{broadcast_text}"
-            )
-            logger.info(f"Sent broadcast message to group {group_id}")
-        except Exception as e:
-            logger.error(f"Error sending broadcast message to group {group_id}: {e}")
 
 if __name__ == "__main__":
     thanos.run()
