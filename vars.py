@@ -13,3 +13,5 @@ API_HASH = "42396a6ff14a569b9d59931643897d0d"
 BOT_USERNAME = "AriseApproveBot"
 # your owner id
 ownerid = 6720082402
+#mongo db url
+DB_URI = "mongo uri"
