@@ -142,7 +142,7 @@ async def autoapprove(client: thanos, message: ChatJoinRequest):
 
 
 
-@thanos.on_message(filters.command("stats") & filters.user(SUDO_USERS))
+@thanos.on_message(filters.command("stats") & filters.user(ownerid))
 async def stats(client: thanos, message: Message):
     users = len(await get_served_users())
     await message.reply_text(
@@ -150,7 +150,7 @@ async def stats(client: thanos, message: Message):
     )
 
 
-@thanos.on_message(filters.command("broadcast") & filters.user(SUDO_USERS))
+@thanos.on_message(filters.command("broadcast") & filters.user(ownerid))
 async def broadcast(cli: thanos, message: Message):
     if message.reply_to_message:
         x = message.reply_to_message.id
