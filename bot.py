@@ -8,7 +8,7 @@ import asyncio
 from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
-from rishabh.users_db import get_served_users
+from rishabh.users_db import get_served_users, add_served_user
 
 
 # Set up logging
@@ -48,7 +48,7 @@ def add_to_data(data_list, new_entry, file_path):
 @thanos.on_message(filters.private & filters.command(["start"]))
 async def start(client: thanos, message: Message):
     try:
-        add_to_data(user_data, message.from_user.id, USER_DATA_FILE)
+        add_served_user(message.from_user.id)
         button = [
             [
                 InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
