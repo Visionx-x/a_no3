@@ -1,3 +1,6 @@
 pyrogram
 requests
 nano
+pymongo==4.3.3
+python-dotenv
+git+https://github.com/Abishnoi69/async_mongo@master
