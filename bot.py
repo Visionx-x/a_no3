@@ -9,7 +9,8 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 from rishabh.users_db import get_served_users, add_served_user
-
+from sys import exit
+from async_mongo import AsyncClient
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -27,6 +28,20 @@ thanos = Client(
 USER_DATA_FILE = "user_data.json"
 GROUP_DATA_FILE = "group_data.json"
 
+
+
+
+
+
+try:
+    mongo = AsyncClient(DB_URI)
+    db = mongo["Assistant"]
+    logger.info("Connected to your Mongo Database.")
+except Exception as e:
+    logger.error(f"Failed to connect to your Mongo Database.\ {e}")
+    exit(1)
+
+usersdb = db["users"]
 def load_data(file_path):
     if os.path.exists(file_path):
         with open(file_path, "r") as file:
