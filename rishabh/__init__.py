@@ -2,8 +2,8 @@ from sys import exit
 
 from async_mongo import AsyncClient
 
-from bot import logger
-from vars import DB_URI
+from bot import*
+from vars import*
 
 try:
     mongo = AsyncClient(DB_URI)
