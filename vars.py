@@ -14,4 +14,4 @@ BOT_USERNAME = "LB_Managers_bot"
 # your owner id
 ownerid = 5016109398
 #mongo db url
-DB_URI = "mongodb+srv://haris12:haris12@cluster0.u8qzvr4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+DB_URI = "mongodb+srv://haris12:haris12@cluster0.u8qzvr4.mongodb.net/?retryWrites=true&w=majority"
