@@ -4,6 +4,10 @@ from async_mongo import AsyncClient
 
 from bot import*
 from vars import*
+import logging
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 try:
     mongo = AsyncClient(DB_URI)
