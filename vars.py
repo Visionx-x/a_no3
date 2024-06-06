@@ -4,13 +4,13 @@ import os
 
 
 # your bot token
-B_TOKEN = "7160882534:AAFvs5HzZ8Vz5G-VZ9Qx_o7SYVP_-EpyFMQ"
+B_TOKEN = "6512679486:AAEEZvE085JgrtPFOtR3JMztHesRONi5cSw"
 #your api id
 API = 10248430
 # your api hash
 API_HASH = "42396a6ff14a569b9d59931643897d0d"
 # your bot username without @ like this ultron2_robot
-BOT_USERNAME = "waveapprovebot"
+BOT_USERNAME = "Dup96_bot"
 # your owner id
 ownerid = 5642016734
 #mongo db url
