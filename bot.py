@@ -24,7 +24,7 @@ from sys import exit
 
 from async_mongo import AsyncClient
 
-
+logo_url = "https://graph.org/file/c96ff326d198ba2142efb.jpg"
 
 # Set up logging
 
@@ -122,38 +122,34 @@ def add_to_data(data_list, new_entry, file_path):
 
 
 
-@thanos.on_message(filters.private & filters.command(["start"]))
 
-async def start(client: thanos, message: Message):
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
+# Function to add served user (assuming you have implemented this function)
+
+
+@Client.on_message(filters.private & filters.command(["start"]))
+async def start(client: Client, message: Message):
     try:
-
         await add_served_user(message.from_user.id)
 
         button = [
-
             [
-
                 InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-
             ]
-
         ]
 
-        await message.reply_text(
-
-            text="**HELLO...⚡\n\ni am an advanced telegram auto request accept bot.**",
-
-            reply_markup=InlineKeyboardMarkup(button),
-
-            disable_web_page_preview=True
-
+        await client.send_photo(
+            chat_id=message.chat.id,
+            photo=logo_url,
+            caption="**HELLO...⚡\n\ni am an advanced telegram auto request accept bot.**",
+            reply_markup=InlineKeyboardMarkup(button)
         )
 
     except Exception as e:
-
         logger.error(f"Error in start handler: {e}")
-
+    
 
 
 @thanos.on_chat_member_updated(filters.group)
