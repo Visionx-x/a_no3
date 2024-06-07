@@ -4,7 +4,7 @@ import os
 
 
 # your bot token
-B_TOKEN = "6512679486:AAEEZvE085JgrtPFOtR3JMztHesRONi5cSw"
+B_TOKEN = "6589147306:AAGa_GW0ItDcnLSZ_fE6poxMZ9hkWmVl4Jg"
 #your api id
 API = 10248430
 # your api hash
