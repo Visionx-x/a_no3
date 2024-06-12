@@ -218,11 +218,12 @@ async def welcome_goodbye(client: thanos, message: ChatMemberUpdated):
 
 
 
-                await client.send_message(
+                await client.send_photo(
 
                     chat_id=user.id,
+                    photo=logo_url,
 
-                    text=personal_goodbye_message
+                    caption=personal_goodbye_message
 
                 )
 
@@ -273,11 +274,11 @@ async def autoapprove(client: thanos, message: ChatJoinRequest):
 
 
 
-        await client.send_message(
+        await client.send_photo(
 
             chat_id=message.from_user.id,
-
-            text=personal_message
+            photo=logo_url,
+            caption=personal_message
 
         )
 
