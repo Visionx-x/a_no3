@@ -24,7 +24,7 @@ from sys import exit
 
 from async_mongo import AsyncClient
 
-logo_url = "https://graph.org/file/c96ff326d198ba2142efb.jpg"
+logo_url = "https://graph.org/file/98a15d8ecbd89eb30f7aa.jpg"
 
 # Set up logging
 
