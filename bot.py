@@ -131,25 +131,9 @@ async def autoapprove(client: thanos, message: ChatJoinRequest):
 
         # Send a personal welcome message to the user
         personal_message = (
-            f"👋 𝗛𝗲𝗹𝗹𝗼 {message.from_user.mention}, Welcome to 𝗞𝗱𝗿𝗮𝗺𝗮𝗪𝗮𝘃𝗲\n\n"
-
-"🔰 𝗪𝗵𝗮𝘁 𝘆𝗼𝘂 𝘄𝗶𝗹𝗹 𝗴𝗲𝘁 𝗯𝘆 𝗝𝗼𝗶𝗻𝗶𝗻𝗴 𝗞𝗱𝗿𝗮𝗺𝗮𝗪𝗮𝘃𝗲?\n"
-"1⃣ All your favourite Korean & Chinese Drama in different audio like English Hindi Tamil\n"
-"2⃣ Drama with a Complete Season or Ongoing Episode\n"
-"3⃣ Watch Now and Download link of all the Dreams\n\n"
-
-"✊ 𝗕𝗲𝗰𝗼𝗺𝗲 𝗮 𝗺𝗲𝗺𝗯𝗲𝗿 𝗼𝗳 𝗼𝘂𝗿 𝗞𝗱𝗿𝗮𝗺𝗮𝗪𝗮𝘃𝗲 𝗖𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆?\n"
-"1⃣ Request any Drama which you want to watch\n"
-"2⃣ If the Drama is available our Bot will provide you the link\n"
-"3⃣ Chat with Other Drama Lovers\n\n"
-
-"🔰 Drama online dekhe Hindi English Tamil etc languages me\n\n"
-
-"♥️ Our Community Joining Link 👇\n"
-"https://t.me/KDramaWave\n"
-"https://t.me/KDramaWave\n"
-"https://t.me/KDramaWave\n\n"
-
+            f"𝗛𝗲𝗹𝗹𝗼 👋 {message.from_user.mention},\n\n"
+"✅ 𝗬𝗼𝘂𝗿 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝘁𝗼 𝗷𝗼𝗶𝗻 (𝗖𝗵𝗮𝗻𝗻𝗲𝗹) 𝗵𝗮𝘀 𝗯𝗲𝗲𝗻 𝗮𝗽𝗽𝗿𝗼𝘃𝗲𝗱!\n"
+"👍 𝗬𝗼𝘂𝗿 𝗮𝗿𝗲 𝗻𝗼𝘄 𝗺𝗲𝗺𝗯𝗲𝗿 𝗼𝗳 𝘁𝗵𝗶𝘀 (𝗖𝗵𝗮𝗻𝗻𝗲𝗹)\n"
 "🔰 𝗦𝗲𝗻𝗱 /start 𝘁𝗼 𝗸𝗻𝗼𝘄 𝗺𝗼𝗿𝗲 𝗮𝗯𝗼𝘂𝘁 𝘁𝗵𝗶𝘀 𝗯𝗼𝘁."
         )
 
