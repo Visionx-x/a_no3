@@ -4,7 +4,7 @@ import os
 
 
 # your bot token
-B_TOKEN = "6999255941:AAEJfdcjYo1N-BWAc1o9llCoimhX6dBPEr4"
+B_TOKEN = "6999255941:AAGRdWuJlnIFI2E6sDm0dY_xFwCqwWKJUAY"
 #your api id
 API = 10248430
 # your api hash
@@ -14,4 +14,4 @@ BOT_USERNAME = "AriseApproveBot"
 # your owner id
 ownerid = 6720082402
 #mongo db url
-DB_URI = "mongo uri"
+DB_URI = "mongodb+srv://haris12:haris12@cluster0.u8qzvr4.mongodb.net/?retryWrites=true&w=majority"
