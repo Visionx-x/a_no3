@@ -131,7 +131,7 @@ async def autoapprove(client: thanos, message: ChatJoinRequest):
 
         # Send a personal welcome message to the user
         personal_message = (
-            f"👋 𝗛𝗲𝗹𝗹𝗼 {message.from_user.mention},, Welcome to 𝗞𝗱𝗿𝗮𝗺𝗮𝗪𝗮𝘃𝗲\n\n"
+            f"👋 𝗛𝗲𝗹𝗹𝗼 {message.from_user.mention}, Welcome to 𝗞𝗱𝗿𝗮𝗺𝗮𝗪𝗮𝘃𝗲\n\n"
 
 "🔰 𝗪𝗵𝗮𝘁 𝘆𝗼𝘂 𝘄𝗶𝗹𝗹 𝗴𝗲𝘁 𝗯𝘆 𝗝𝗼𝗶𝗻𝗶𝗻𝗴 𝗞𝗱𝗿𝗮𝗺𝗮𝗪𝗮𝘃𝗲?\n"
 "1⃣ All your favourite Korean & Chinese Drama in different audio like English Hindi Tamil\n"
