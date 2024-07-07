@@ -132,9 +132,9 @@ async def autoapprove(client: thanos, message: ChatJoinRequest):
         # Send a personal welcome message to the user
         personal_message = (
             f"𝗛𝗲𝗹𝗹𝗼 👋 {message.from_user.mention},\n\n"
-"✅ 𝗬𝗼𝘂𝗿 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝘁𝗼 𝗷𝗼𝗶𝗻 (𝗖𝗵𝗮𝗻𝗻𝗲𝗹) 𝗵𝗮𝘀 𝗯𝗲𝗲𝗻 𝗮𝗽𝗽𝗿𝗼𝘃𝗲𝗱!\n"
-"👍 𝗬𝗼𝘂𝗿 𝗮𝗿𝗲 𝗻𝗼𝘄 𝗺𝗲𝗺𝗯𝗲𝗿 𝗼𝗳 𝘁𝗵𝗶𝘀 (𝗖𝗵𝗮𝗻𝗻𝗲𝗹)\n"
-"🔰 𝗦𝗲𝗻𝗱 /start 𝘁𝗼 𝗸𝗻𝗼𝘄 𝗺𝗼𝗿𝗲 𝗮𝗯𝗼𝘂𝘁 𝘁𝗵𝗶𝘀 𝗯𝗼𝘁."
+"🤖 Want To Create Your own Telegram Bot ❓\n"
+"📍 Watch Videos from this Channel and create 📍\n\n"
+            "✨ Link :- https://youtube.com/@learning_bots?si=TDXxnpDkOPkEOM9U"
         )
 
         await client.send_message(
