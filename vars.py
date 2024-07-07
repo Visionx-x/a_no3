@@ -14,4 +14,4 @@ BOT_USERNAME = "LB_Auto_Accept_bot"
 # your owner id
 ownerid = 5016109398
 #mongo db url
-DB_URI = "mongodb+srv://haris12:haris12@cluster0.u8qzvr4.mongodb.net/?retryWrites=true&w=majority"
+DB_URI = "mongodb+srv://atlas-sample-dataset-load-668a76c3227ccc52e298125a:Visionbot@visionbot.bhbwcls.mongodb.net/?retryWrites=true&w=majority&appName=Visionbot"
