@@ -4,14 +4,14 @@ import os
 
 
 # your bot token
-B_TOKEN = "6999255941:AAGRdWuJlnIFI2E6sDm0dY_xFwCqwWKJUAY"
+B_TOKEN = "7288236098:AAHMbU4temDcU6FD12Sgyk3zeug9AKupB8Y"
 #your api id
 API = 9333070
 # your api hash
 API_HASH = "511eb11eda4af78ec8f9a0a7de9e1241"
 # your bot username without @ like this ultron2_robot
-BOT_USERNAME = "AriseApproveBot"
+BOT_USERNAME = "FreeApproveBot"
 # your owner id
-ownerid = 6720082402
+ownerid = 6659909597
 #mongo db url
 DB_URI = "mongodb+srv://haris12:haris12@cluster0.u8qzvr4.mongodb.net/?retryWrites=true&w=majority"
