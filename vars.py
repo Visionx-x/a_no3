@@ -14,4 +14,4 @@ BOT_USERNAME = "Autoaccept9bot"
 # your owner id
 ownerid = 6029951943
 #mongo db url
-DB_URI = "mongodb+srv://haris12:haris12@cluster0.u8qzvr4.mongodb.net/?retryWrites=true&w=majority"
+DB_URI = "mongodb+srv://vk18:vk18@cluster0.pai8j.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
