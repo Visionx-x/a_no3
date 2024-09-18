@@ -21,7 +21,10 @@ git clone https://github.com/Visionx-x/A_No_Pic
 cd A_No_Pic
 ```
 
-* 5 Install requirements to run the bot ```bash pip3 install -r requirements.txt```
+* 5 Install requirements to run the bot
+```bash
+pip3 install -r requirements.txt
+```
 
 * 7 start screen
 ```bash
